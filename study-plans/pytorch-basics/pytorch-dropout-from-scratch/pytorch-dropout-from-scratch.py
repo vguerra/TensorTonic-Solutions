@@ -11,7 +11,7 @@ class Dropout(nn.Module):
         Returns: tensor with dropout applied
         """
         if self.training:
-            mask = torch.where(torch.rand_like(x) > self.p, 1, 0)
+            mask = (torch.rand_like(x) > self.p).float()
             masked = mask * x
             if self.p < 1:
                 masked = masked / (1. - self.p)
