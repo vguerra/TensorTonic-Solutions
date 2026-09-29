@@ -14,10 +14,10 @@ def dropout_kernel(
     mask = offs < n
 
     x = tl.load(x_ptr + offs, mask=mask, other=0.0)
-    mask_p = tl.load(mask_ptr + offs, mask=mask, other=1.0)
+    mask_d = tl.load(mask_ptr + offs, mask=mask, other=1.0)
 
     scale_factor = 1. / (1. - p)
-    out = x * mask_p * scale_factor
+    out = x * mask_d * scale_factor
 
     tl.store(out_ptr + offs, out, mask=mask)
 
