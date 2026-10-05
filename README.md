@@ -60,6 +60,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Weight Initialization | Implement a function that initializes a weight tensor using one of four standard initialization methods. | https://www.tensortonic.com/problems/pytorch-weight-initialization |
 | Cross Entropy Loss (Mean Reduction) | Implement mean categorical cross-entropy in Triton with stable row-wise log-sum-exp and atomic loss accumulation. | https://www.tensortonic.com/problems/triton-cross-entropy |
 | Dropout (Inverted Scaling) | Implement inverted dropout in Triton with a supplied mask, register scaling, and tail-safe tiled memory access. | https://www.tensortonic.com/problems/triton-dropout |
+| FlashAttention Forward | Implement fused FlashAttention forward in Triton with streamed key-value blocks and online softmax statistics. | https://www.tensortonic.com/problems/triton-flash-attention-fwd |
 | Fused Matmul + Bias + ReLU | Fuse tiled matrix multiplication, per-column bias, and ReLU in one Triton kernel with tail-safe memory access. | https://www.tensortonic.com/problems/triton-fused-matmul-bias-relu |
 | Fused Multiply-Add | Implement a Triton fused multiply-add kernel with contiguous tiles, hardware FMA, and masked tail handling. | https://www.tensortonic.com/problems/triton-fused-multiply-add |
 | Fused Row-Wise Softmax | Implement fused row-wise softmax in Triton with stable max subtraction, register reductions, and masked column tails. | https://www.tensortonic.com/problems/triton-fused-softmax |
